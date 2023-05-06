@@ -1,0 +1,31 @@
+curl https://polygon-mainnet.g.alchemy.com/v2/KYz_i4HNmh_cnrDJOVLx8cJq7QFEXPKv -X POST -H "Content-Type: application / json" -d '{"jsonrpc": "2.0"، "method": "eth_getBlockBy "،" params ": [" latest "، false] ،" id ": 0} '- أنا مه
+npm تثبيت alchemy-sdk
+نقطة تثبيت web3
+# Setup
+from web3 import Web3
+
+alchemy_url = "https://polygon-mainnet.g.alchemy.com/v2/KYz_i4HNmh_cnrDJOVLx8cJq7QFEXPKv"
+w3 = Web3(Web3.HTTPProvider(alchemy_url))
+
+# Print if web3 is successfully connected
+print(w3.isConnected())
+
+# Get the latest block number
+latest_block = w3.eth.get_block("latest")
+طباعة (latest_block)import { Network, Alchemy } from 'alchemy-sdk';
+
+const settings = {
+    apiKey: "KYz_i4HNmh_cnrDJOVLx8cJq7QFEXPKv",
+    network: Network.MATIC_MAINNET,
+};
+
+const alchemy = new Alchemy(settings);
+
+// get the latest block
+const latestBlock = alchemy.core.getBlock("latest").then(console.log);
+
+
+<!---
+adelalkateeb999/adelalkateeb999 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
